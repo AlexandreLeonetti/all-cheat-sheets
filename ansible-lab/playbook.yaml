@@ -1,0 +1,17 @@
+- name: Ansible basics lab
+  hosts: local
+
+  vars:
+    app_dir: /tmp/ansible-demo
+    app_file: hello.txt
+
+  tasks:
+    - name: Create directory
+      file:
+        path: "{{ app_dir }}"
+        state: directory
+
+    - name: Create file with variable
+      copy:
+        content: "Hello {{ app_file }}\n"
+        dest: "{{ app_dir }}/{{ app_file }}"

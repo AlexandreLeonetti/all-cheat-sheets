@@ -1,0 +1,24 @@
+- name: Ansible with 2 Linux targets
+  hosts: linux
+  become: true
+
+  vars:
+    demo_dir: /tmp/ansible-demo
+
+  tasks:
+    - name: Create demo directory
+      file:
+        path: "{{ demo_dir }}"
+        state: directory
+        mode: "0755"
+
+    - name: Create a file with hostname
+      copy:
+        content: "Hello from {{ inventory_hostname }}\n"
+        dest: "{{ demo_dir }}/hello.txt"
+      notify: show handler message
+
+  handlers:
+    - name: show handler message
+      debug:
+        msg: "Handler triggered on {{ inventory_hostname }}"
