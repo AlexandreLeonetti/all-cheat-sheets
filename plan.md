@@ -1,6 +1,22 @@
 
 If you want one linear order, here it is:
 1️⃣ Kubernetes (prod & troubleshooting)
+2️⃣ Ansible
+3️⃣ Helm + ArgoCD (GitOps)
+4️⃣ OpenShift (differences & constraints)
+5️⃣ GCP (Kubernetes-centric)
+6️⃣ AWS (light refresh)
+7️⃣ Anthos (conceptual only)
+8️⃣ FastAPI / Spring Boot
+9️⃣ React / RN
+🔟 Algo & DS
+
+
+
+
+
+If you want one linear order, here it is:
+1️⃣ Kubernetes (prod & troubleshooting)
 cheatsheet +
 
 You must be able to answer without hesitation:
